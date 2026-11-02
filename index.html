@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pollify - Create polls, collect opinions and discover what people think.">
+
+    <title>Pollify - Your Voice Matters</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">P</span>
+            <span>Pollify</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#create">Create Poll</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="#signin" class="signin-btn">Sign In</a>
+            <a href="#create" class="nav-create-btn">Get Started</a>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero-section" id="home">
+
+            <div class="hero-content">
+                <span class="hero-label">YOUR OPINION MATTERS</span>
+
+                <h1>
+                    Every opinion
+                    <span>counts.</span>
+                </h1>
+
+                <p>
+                    Create polls, share your thoughts and discover
+                    what people around the world really think.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#create" class="primary-btn">Create a Poll +</a>
+                    <a href="#explore" class="secondary-btn">Explore Polls</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <span class="live-indicator">● LIVE POLL</span>
+
+                    <h3>Which technology excites you the most?</h3>
+
+                    <div class="hero-option">
+                        <span>Artificial Intelligence</span>
+                        <strong>48%</strong>
+                    </div>
+
+                    <div class="hero-progress">
+                        <div style="width: 48%"></div>
+                    </div>
+
+                    <div class="hero-option">
+                        <span>Robotics</span>
+                        <strong>32%</strong>
+                    </div>
+
+                    <div class="hero-progress">
+                        <div style="width: 32%"></div>
+                    </div>
+
+                    <div class="hero-option">
+                        <span>Virtual Reality</span>
+                        <strong>20%</strong>
+                    </div>
+
+                    <div class="hero-progress">
+                        <div style="width: 20%"></div>
+                    </div>
+
+                    <span class="hero-votes">1,248 votes</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="stats-section">
+
+            <div class="stat-item">
+                <h2 id="total-polls">0</h2>
+                <p>Polls Created</p>
+            </div>
+
+            <div class="stat-item">
+                <h2 id="total-votes">0</h2>
+                <p>Total Votes</p>
+            </div>
+
+            <div class="stat-item">
+                <h2>24/7</h2>
+                <p>Open Voting</p>
+            </div>
+
+        </section>
+
+
+        <section class="explore-section" id="explore">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">DISCOVER OPINIONS</span>
+                    <h2>Explore Polls</h2>
+                    <p>See what everyone is talking about.</p>
+                </div>
+
+                <button class="create-btn" id="open-poll-modal">
+                    + Create Poll
+                </button>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Polls</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+
+            <div class="poll-grid" id="poll-container">
+
+                <article class="poll-card" data-category="technology">
+                    <div class="poll-card-top">
+                        <span class="poll-category">Technology</span>
+                        <span class="poll-status">● Active</span>
+                    </div>
+
+                    <h3>Which programming language should beginners learn first?</h3>
+
+                    <div class="poll-options">
+                        <div class="poll-option">
+                            <span>JavaScript</span>
+                            <span>42%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:42%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Python</span>
+                            <span>35%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:35%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Java</span>
+                            <span>15%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:15%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>C++</span>
+                            <span>8%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:8%"></div>
+                        </div>
+                    </div>
+
+                    <div class="poll-card-footer">
+                        <span class="vote-count" data-votes="248">248 votes</span>
+                        <button class="vote-btn">Vote Now →</button>
+                    </div>
+                </article>
+
+
+                <article class="poll-card" data-category="entertainment">
+                    <div class="poll-card-top">
+                        <span class="poll-category">Entertainment</span>
+                        <span class="poll-status">● Active</span>
+                    </div>
+
+                    <h3>Which entertainment genre do you enjoy most?</h3>
+
+                    <div class="poll-options">
+                        <div class="poll-option">
+                            <span>Action</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:45%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Comedy</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:30%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Horror</span>
+                            <span>15%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:15%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Drama</span>
+                            <span>10%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:10%"></div>
+                        </div>
+                    </div>
+
+                    <div class="poll-card-footer">
+                        <span class="vote-count" data-votes="156">156 votes</span>
+                        <button class="vote-btn">Vote Now →</button>
+                    </div>
+                </article>
+
+
+                <article class="poll-card" data-category="education">
+                    <div class="poll-card-top">
+                        <span class="poll-category">Education</span>
+                        <span class="poll-status">● Active</span>
+                    </div>
+
+                    <h3>What is the best way to learn a new skill?</h3>
+
+                    <div class="poll-options">
+                        <div class="poll-option">
+                            <span>Online Courses</span>
+                            <span>38%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:38%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Practice</span>
+                            <span>42%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:42%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Books</span>
+                            <span>12%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:12%"></div>
+                        </div>
+
+                        <div class="poll-option">
+                            <span>Mentorship</span>
+                            <span>8%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:8%"></div>
+                        </div>
+                    </div>
+
+                    <div class="poll-card-footer">
+                        <span class="vote-count" data-votes="312">312 votes</span>
+                        <button class="vote-btn">Vote Now →</button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="create-section" id="create">
+
+            <div class="create-content">
+                <span class="section-label">START A CONVERSATION</span>
+
+                <h2>Have a question?</h2>
+
+                <p>
+                    Turn your curiosity into a poll.
+                    Let the world share its opinion.
+                </p>
+
+                <button class="primary-btn" id="open-create-modal">
+                    Create Your First Poll +
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <dialog class="poll-modal" id="poll-modal">
+
+        <form id="poll-form" class="poll-form">
+
+            <div class="modal-header">
+                <div>
+                    <span class="section-label">NEW POLL</span>
+                    <h2>Create a Poll</h2>
+                </div>
+
+                <button type="button" class="close-modal" id="close-poll-modal" aria-label="Close">
+                    &times;
+                </button>
+            </div>
+
+            <label for="poll-question">Your question</label>
+            <input
+                type="text"
+                id="poll-question"
+                placeholder="What would you like to ask?"
+                maxlength="150"
+                required
+            >
+
+            <label for="poll-category">Category</label>
+            <select id="poll-category" required>
+                <option value="">Choose a category</option>
+                <option value="technology">Technology</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="education">Education</option>
+                <option value="sports">Sports</option>
+                <option value="general">General</option>
+            </select>
+
+            <label>Answer options</label>
+
+            <div id="answer-options">
+                <input type="text" class="answer-input" placeholder="Option 1" required>
+                <input type="text" class="answer-input" placeholder="Option 2" required>
+            </div>
+
+            <button type="button" id="add-option-btn" class="add-option-btn">
+                + Add another option
+            </button>
+             
+<div class="form-group">
+  <label for="poll-duration">Poll Duration</label>
+  <select id="poll-duration" required>
+    <option value="10">10 Seconds</option>
+    <option value="30">30 Seconds</option>
+    <option value="60">1 Minute</option>
+    <option value="300">5 Minutes</option>
+    <option value="900">15 Minutes</option>
+    <option value="1800">30 Minutes</option>
+    <option value="3600">1 Hour</option>
+    <option value="21600">6 Hours</option>
+    <option value="43200">12 Hours</option>
+    <option value="86400" selected>24 Hours</option>
+    <option value="259200">3 Days</option>
+    <option value="604800">7 Days</option>
+  </select>
+</div>
+
+            <button type="submit" class="primary-btn submit-poll-btn">
+                Publish Poll
+            </button>
+
+        </form>
+
+    </dialog>
+
+
+    <footer class="footer">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">P</span>
+            <span>Pollify</span>
+        </a>
+
+        <p>Your questions. Their opinions. Real-time insights.</p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#create">Create Poll</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Pollify. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
